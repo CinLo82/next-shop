@@ -1,6 +1,7 @@
-import { useRef } from 'react';
-import 'styles/Login.scss'
-import logo from 'logos/logo_yard_sale.svg';
+import React, { useRef } from 'react';
+import Image from 'next/image';
+import logo from '@logos/logo_yard_sale.svg';
+import styles from '@styles/Login.scss'
 
 const Login = () => {
     const form = useRef(null);
@@ -15,15 +16,14 @@ const Login = () => {
         console.log(data);
     }
     
-
     return(
-        <div className="login">
-            <div className="login-container">
-            <img src={ logo } alt="logo" className="login-logo" />
-            <form action="/" className="form" ref={form}>
+        <div className={styles.login}>
+            <div className={styles['login-container']}>
+            <Image src={ logo } alt="logo" className={styles['login-logo']} />
+            <form action="/" className={styles.form} ref={form}>
 					<label 
                         htmlFor="email" 
-                        className="label"
+                        className={styles.label}
                     >
                         Email address
                     </label>
@@ -31,11 +31,11 @@ const Login = () => {
                         type="text" 
                         name="email" 
                         placeholder="platzi@example.cm" 
-                        className="input input-email" 
+                        className={`${styles['input']} ${styles['input-email']}`}
                     />
 					<label 
                         htmlFor="password" 
-                        className="label"
+                        className={styles.label}
                     >
                         Password
                     </label>
@@ -43,19 +43,19 @@ const Login = () => {
                         type="password" 
                         name="password" 
                         placeholder="*********" 
-                        className="input input-password" 
+                        className={`${styles['input']} ${styles['input-password']}`}
                     />
 					<button
 						type='submit'
                         onClick={handleSubmit}
-						className="primary-button login-button"
+						className={`${styles['primary-button']} ${styles['login-button']}`}
                     >
 						Log in
 					</button>
 					<a href="/">Forgot my password</a>
 				</form>
 				<button 
-					className="secondary-button signup-button"
+					className={`${styles['secondary-button']} ${styles['signup-button']}`}
 				>
 					Sign up
 				</button>
