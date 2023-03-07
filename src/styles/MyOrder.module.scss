@@ -1,27 +1,27 @@
 @import 'vars';
 
-.my-order {
+.MyOrder {
   width: 360px;
   padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
 	right: 0;
-	background-color: var(--white);
+	background-color: $--white;
 	top: 60px;
 	bottom: auto;
 	border-radius: 6px;
-  border: 1px solid var(--very-light-pink);
+  border: 1px solid $--very-light-pink;
   }
   .title {
-    font-size: var(--lg);
+    font-size: $--lg;
     margin-bottom: 40px;
   }
-  .my-order-container {
+  .MyOrder-container {
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 300px;
   }
-  .my-order-content {
+  .MyOrder-content {
     display: flex;
     flex-direction: column;
   }
@@ -30,7 +30,7 @@
     grid-template-columns: auto 1fr;
     gap: 16px;
     align-items: center;
-    background-color: var(--text-input-field);
+    background-color: $--text-input-field;
     margin-bottom: 24px;
     border-radius: 8px;
     padding: 0 24px;
@@ -40,25 +40,25 @@
     flex-direction: column;
   }
   .order p span:nth-child(1) {
-    font-size: var(--md);
+    font-size: $--md;
     font-weight: bold;
   }
   .order p span:nth-child(2) {
-    font-size: var(--sm);
-    color: var(--very-light-pink);
+    font-size: $--sm;
+    color: $--very-light-pink;
   }
   .order p:nth-child(2) {
     text-align: end;
     font-weight: bold;
   }
   .primary-button {
-    background-color: var(--hospital-green);
+    background-color: $--hospital-green;
     border-radius: 8px;
     border: none;
-    color: var(--white);
+    color: $--white;
     width: 100%;
     cursor: pointer;
-    font-size: var(--md);
+    font-size: $--md;
     font-weight: bold;
     height: 50px;
   }

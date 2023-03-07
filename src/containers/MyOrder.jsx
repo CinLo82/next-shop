@@ -1,8 +1,8 @@
-import { useContext } from 'react';
-import OrderItem from 'components/OrderItem';
-import AppContext from 'context/AppContext';
-import 'styles/MyOrder.scss';
-import flechita from 'icons/flechita.svg';
+import React, { useContext } from 'react';
+import OrderItem from '@components/OrderItem';
+import AppContext from '@context/AppContext';
+import flechita from '@icons/flechita.svg';
+import styles from '@styles/MyOrder.module.scss';
 
 const MyOrder = () => {
     const { state } = useContext(AppContext);
@@ -13,12 +13,12 @@ const MyOrder = () => {
         return sum;
     }
     return(
-        <aside className="my-order">
+        <aside className={styles.MyOrder}>
             <div className="title-container">
                 <img src={ flechita } alt="arrow" />
                 <p className="title">My order</p>
             </div>
-            <div className="my-order-content">
+            <div className="MyOrder-content">
                 {state.cart.map((product, index) => (
                     <OrderItem 
                         indexValue={index} 

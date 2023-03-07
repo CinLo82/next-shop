@@ -1,11 +1,12 @@
 import { useState, useContext } from 'react';
-import Menu from 'components/Menu';
-import AppContext from 'context/AppContext';
-import MyOrder from 'containers/MyOrder';
-import 'styles/Header.scss';
-import menu from 'icons/icon_menu.svg';
-import logo from 'logos/logo_yard_sale.svg';
-import shoppingCart from 'icons/icon_shopping_cart.svg';
+import Image from 'next/image';
+import Menu from '@components/Menu';
+import AppContext from '@context/AppContext';
+import MyOrder from '@containers/MyOrder';
+import menu from '@icons/icon_menu.svg';
+import logo from '@logos/logo_yard_sale.svg';
+import shoppingCart from '@icons/icon_shopping_cart.svg';
+import styles from '@styles/Header.module.scss';
 
 
 const Header = () => {
@@ -23,10 +24,10 @@ const Header = () => {
     }
 
     return(
-        <nav>
-            <img src={ menu } alt="menu" className="nav-menu" />
-            <div className="navbar-left">
-                <img src={ logo } alt="logo" className="nav-logo" />
+        <nav className={styles.Nav}>
+            <Image src={ menu } alt="menu" className={styles.menu} />
+            <div className={styles['navbar-left']}>
+                <Image src={ logo } alt="logo" className={styles['nav-logo']}/>
                 <ul>
                 <li>
                     <a href="/">All</a>
@@ -48,19 +49,19 @@ const Header = () => {
                 </li>
                 </ul>
             </div>
-            <div className="navbar-right">
+            <div className={styles['navbar-right']}>
                 <ul>
                 <li 
-                    className="navbar-email" 
+                    className={styles['navbar-email']} 
                     onClick={handleToggle}
                 >
                     platzi@example.com
                 </li>
                 <li 
-                    className="navbar-shopping-cart" 
+                    className={styles['navbar-shopping-cart']}
                     onClick={handleToggleOrders}
                 >
-                    <img src={ shoppingCart } alt="shopping cart" />
+                    <Image src={ shoppingCart } alt="shopping cart" />
                     {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
                 </li>
                 </ul>

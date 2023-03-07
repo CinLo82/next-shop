@@ -7,26 +7,26 @@
     place-items: center;
   }
   .title {
-    font-size: var(--lg);
+    font-size: $--lg;
     margin-bottom: 12px;
     text-align: center;
   }
   .subtitle {
-    color: var(--very-light-pink);
-    font-size: var(--md);
+    color: $--very-light-pink;
+    font-size: $--md;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 32px;
     text-align: center;
   }
   .primary-button {
-    background-color: var(--hospital-green);
+    background-color: $--hospital-green;
     border-radius: 8px;
     border: none;
-    color: var(--white);
+    color: $--white;
     width: 100%;
     cursor: pointer;
-    font-size: var(--lg);
+    font-size: $--lg;
     font-weight: bold;
     height: 35px;
     text-decoration: none;

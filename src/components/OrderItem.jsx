@@ -1,7 +1,7 @@
-import 'styles/OrderItem.scss';
-import close from 'icons/icon_close.png';
-import AppContext from 'context/AppContext';
+import close from '@icons/icon_close.png';
+import AppContext from '@context/AppContext';
 import { useContext } from 'react';
+import styles from '@styles/OrderItem.module.scss';
 
 
 const OrderItem = ({ product, indexValue }) => {
@@ -11,7 +11,7 @@ const OrderItem = ({ product, indexValue }) => {
         removeFromCart(index);
     }
     return(
-        <div className="OrderItem">
+        <div className={styles.OrderItem}>
             <figure>
                 <img src={product.images[0]} alt={product.title} />
             </figure>
