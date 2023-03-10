@@ -1,10 +1,10 @@
 import { useState, useContext } from 'react';
 import Image from 'next/image';
-import Menu from '@components/Menu';
 import AppContext from '@context/AppContext';
+import Menu from '@components/Menu';
+import MenuMobile from '@components/MenuMobile';
 import MyOrder from '@containers/MyOrder';
 import menu from '@icons/icon_menu.svg';
-import MenuMobile from '@components/MenuMobile';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 import styles from '@styles/Header.module.scss';
