@@ -14,14 +14,21 @@ const OrderItem = ({ product, indexValue }) => {
     return(
         <div className={styles.OrderItem}>
             <figure>
-                <Image src={product.images[0]} alt={product.title} />
+                <Image 
+                    src={product?.images[0]} 
+                    alt={product?.title} 
+                    width={70}
+                    height={70}
+                />
             </figure>
-            <p>{product.title}</p>
-            <p>${product.price}</p>
+            <p>{product?.title}</p>
+            <p>${product?.price}</p>
             <Image 
                 src={ close } 
                 alt="close" 
                 onClick={() => handleRemove(indexValue)}
+                width={15}
+                height={15}
             />
         </div>
     );

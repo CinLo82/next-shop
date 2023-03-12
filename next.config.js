@@ -56,7 +56,12 @@ const nextConfig = {
       },
     ],
     unoptimized: true,
-    domains: ['placeimg.com']
+    domains: [
+      'api.lorem.space', 
+      'placeimg.com', 
+      'wixmp.com', 
+      'romapy'
+    ],
   },
   
 };
