@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>React Shop</title>
+        <meta charSet='utf-8' />
       </Head>
       <body>
         <Main />
