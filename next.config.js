@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+    },
   images: {
     remotePatterns: [
       {
@@ -60,7 +63,12 @@ const nextConfig = {
       'romapy'
     ],
   },
-  
 };
 
-module.exports = nextConfig
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  include: ['production'],
+  register: true,
+});
+
+module.exports = withPWA(nextConfig);

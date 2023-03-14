@@ -15,10 +15,11 @@ module.export = {
     'plugin:next/recommended'
   ],
   plugins: [
-    '¿next'
+    'next'
   ],
   parser: 'babel-eslint',
   parserOptions: {
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
